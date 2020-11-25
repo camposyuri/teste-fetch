@@ -12,11 +12,13 @@
 //   return (document.querySelector("#app").innerHTML = retorno);
 // });
 
-function verificarValorVerdadeiro() {
+function adicionaTexto() {
   fetch("../arquivo.txt")
     .then((response) => response.text())
     .then((dadosText) => {
-      return (document.querySelector("#app").innerHTML = dadosText);
+      return (document.querySelector(
+        "#app"
+      ).innerHTML = dadosText.toUpperCase());
     });
 }
-verificarValorVerdadeiro();
+adicionaTexto();
